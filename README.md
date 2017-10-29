@@ -3,27 +3,36 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ethen8181/machine-learning/blob/master/LICENSE)
 ![Python 3.5](https://img.shields.io/badge/python-3.5-blue.svg)
 
-This is one of the continuously updated repositories that documents personal journey on learning data science related topics. Currently, contents are organized into two separate repositories based on the following table's description.
+This is a continuously updated repository that documents personal journey on learning data science, machine learning related topics.
 
-| Repository | Documentation Focus |
-| ---------- | ------------------- |
-| [machine-learning](https://github.com/ethen8181/machine-learning) | Machine learning, algorithm and programming (mainly in Python) |
-| [Business-Analytics](https://github.com/ethen8181/Business-Analytics) | All other data analytic related stuffs, e.g. concepts, statistics, visualizations (R, Python) |
-
-Within each section, documentations are listed in reverse chronological order of the start date (the date when the first notebook in that folder was created, if the notebook happened to be updated, then the actual date will be at the top of each notebook). Each of them are independent of one another unless specified.
+- **Goal:** Introduce machine learning contents in Jupyter Notebook format. The content aims to strike a good balance between mathematical notations, educational implementation from scratch (using Python's scientific stack including numpy, scipy, pandas, matplotlib etc) and open-source library usage (scikit-learn, pyspark, gensim, keras, tensorflow).
+- **Short Note:** Within each section, documentations are listed in reverse chronological order of the start date (the date when the first notebook in that folder was created, if the notebook happened to be updated, then the actual date will be at the top of each notebook). Each of them are independent of one another unless specified.
 
 
 ## Documentation Listings
+
+#### projects : 2017.09.23
+
+End to end project including data preprocessing, model building.
+
+- [Kaggle challenge](https://www.kaggle.com/c/DontGetKicked): Predict if a car purchased at auction is a unfortunate purchase. [[folder](https://github.com/ethen8181/machine-learning/blob/master/projects/data_challenge/)]
+
+#### ab_tests : 2017.08.09
+
+A/B testing, a.k.a experimental design. Includes 1) quick review of necessary statistic concepts. 2) methods and workflow/thought-process for conducting the test. 3) caveats to look out for.
+
+- Frequentist A/B testing (includes a quick review of concepts such as p-value, confidence interval). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/ab_tests/frequentist_ab_test.ipynb)]
 
 #### model_selection : 2017.06.12
 
 Methods for selecting, evaluating models/algorithms.
 
 - K-fold cross validation, grid/random search from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/model_selection.ipynb)]
+- AUC (Area under the ROC, precision/recall curve) from scratch (includes building a custom scikit-learn transformer). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/model_selection/auc/auc.ipynb)]
 
 #### spark : 2017.06.07
 
-Note that the following notebook is not a tutorial on the basics of spark, it assumes you're already somewhat familar with it or can pick it up quickly by checking documentations along the way. For those interested there's also a [pyspark cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf) that may come in handy.
+Note that the following notebook is not a tutorial on the basics of spark, it assumes you're already somewhat familar with it or can pick it up quickly by checking documentations along the way. For those interested there's also a [pyspark rdd cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf) and [pyspark dataframe cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_SQL_Cheat_Sheet_Python.pdf) that may come in handy.
 
 - Pyspark installation on Mac. [[markdown](https://github.com/ethen8181/machine-learning/tree/master/spark/installation.md)]
 - Examples of manipulating with data (crimes data) and building a RandomForest model with Spark. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/spark/crime.ipynb)]
@@ -37,10 +46,10 @@ Dimensionality reduction methods.
 
 #### recsys : 2016.12.17
 
-Recommendation System. Starters into the field should go through the first notebook to understand the basics of matrix factorization methods. Then the second notebook - "ALS-WR for implicit feedback data" and third notebook - "Bayesian Personalized Ranking" are independent of one another as they are simply different algorithms.
+Recommendation System. Starters into the field should go through the first notebook to understand the basics of matrix factorization methods. Then the second notebook - "ALS-WR for implicit feedback data" and third notebook - "Bayesian Personalized Ranking" can be independent of one another as they are simply different algorithms. Although it's still ideal to go through them in the listed sequence.
 
 - Alternating Least Squares with Weighted Regularization (ALS-WR) from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/1_ALSWR.ipynb)]
-- ALS-WR for implicit feedback data from scratch & mean average precision at k evaluation. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/2_implicit.ipynb)]
+- ALS-WR for implicit feedback data from scratch & mean average precision at k (mapk) and normalized cumulative discounted gain (ndcg) evaluation. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/2_implicit.ipynb)]
 - Bayesian Personalized Ranking (BPR) from scratch & AUC evaluation. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/recsys/4_bpr.ipynb)]
 
 #### trees : 2016.12.10
@@ -49,7 +58,7 @@ Tree-based models for both regression and classification tasks.
 
 - Decision Tree from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/decision_tree.ipynb)]
 - Random Forest from scratch and Extra Trees. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/random_forest.ipynb)]
-- Gradient Boosting Machine from scratch. [[nbviewer]](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/gbm/gbm.ipynb)
+- Gradient Boosting Machine (GBM) from scratch. [[nbviewer]](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/gbm/gbm.ipynb)
 - Xgboost API walkthrough (includes hyperparmeter tuning via scikit-learn like API). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/trees/xgboost.ipynb)]
 
 #### association_rule : 2016.09.16
@@ -70,7 +79,7 @@ TF-IDF and Topic Modeling are techniques specifically used for text analytics.
 
 #### data_science_is_software : 2016.08.01  
 
-SciPy 2016: Data Science is Software. Best practices for doing data science (in Python).
+Best practices for doing data science in Python.
 
 - View [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/data_science_is_software/notebooks/data_science_is_software.ipynb)]
 
@@ -80,8 +89,9 @@ Curated notes on deep learning. [Tensorflow](https://www.tensorflow.org/) is use
 
 - Softmax Regression from scratch. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/softmax.ipynb)]
 - Softmax Regression using Tensorflow (includes Tensorflow hello world). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/softmax_tensorflow.ipynb)]
-- Multi-layers Neural Network. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/nn_tensorflow.ipynb)]
-- Convolutional Neural Network. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/cnn_image_tensorflow.ipynb)]
+- Multi-layers Neural Network using Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/nn_tensorflow.ipynb)]
+- Convolutional Neural Network using Tensorflow. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/cnn_image_tensorflow.ipynb)]
+- Word2vec (skipgram + negative sampling) using Gensim (includes text preprocessing with spaCy). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/deep_learning/word2vec/word2vec_detailed.ipynb)]
 
 #### keras : 2016.06.29
 
@@ -157,17 +167,16 @@ Training Linear Regression with gradient descent in R.
 
 ## Python Programming
 
+- 2017.08.23 | Understanding iterables, iterator and generators. [[nbviewer]](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/iterator/iterator.ipynb)
+- 2017.07.12 | Cohort analysis. Visualizing user retention by cohort with seaborn's heatmap and illustrating pandas's unstack. [[nbviewer]](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/cohort/cohort.ipynb)
 - 2017.03.16 | Logging module. [[nbviewer]](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/logging.ipynb)
-- 2016.12.26 | Walking through the free online tutorial, [Problem Solving with Algorithms and Data Structures](http://interactivepython.org/runestone/static/pythonds/index.html), that introduces basic data structure, algorithms from scratch. [[folder](https://github.com/ethen8181/machine-learning/tree/master/python/algorithms)]
+- 2016.12.26 | Data structure, algorithms from scratch. [[folder](https://github.com/ethen8181/machine-learning/tree/master/python/algorithms)]
 - 2016.12.22 | Cython and Numba quickstart for high performance python. [[nbviewer]](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/cython/cython.ipynb)
-- 2016.06.22 | pandas's category type. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/pandas_category.ipynb)]
-- 2016.06.10 | unittest. [[python code](https://github.com/ethen8181/machine-learning/blob/master/python/test.py)]
-- 2016.04.26 | Some pre-implemented data structure and algorithm. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/python3_cookbook/1_data_structure.ipynb)]
+- 2016.06.22 | Optimizing Pandas (e.g. reduce memory usage using category type). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/pandas/pandas.ipynb)]
+- 2016.06.10 | Unittest. [[Python script](https://github.com/ethen8181/machine-learning/blob/master/python/test.py)]
+- 2016.04.26 | Using built-in data structure and algorithm. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/python3_cookbook/1_data_structure.ipynb)]
 - 2016.04.26 | Tricks with strings and text. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/python3_cookbook/2_strings_and_text.ipynb)]
-- 2016.04.17 | python's decorators (useful script for logging and timing function). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/decorators/decorators.ipynb)]
-- 2016.03.18 | pandas's pivot table. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/pivot_table/pivot_table.ipynb)]
+- 2016.04.17 | Python's decorators (useful script for logging and timing function). [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/decorators/decorators.ipynb)]
+- 2016.03.18 | Pandas's pivot table. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/pivot_table/pivot_table.ipynb)]
 - 2016.03.02 | @classmethod, @staticmethod and @property. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/class.ipynb)]
-- 2016.02.22 | sorting with itemgetter and attrgetter. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/sorting_with_itemgetter.ipynb)]
-- 2016.02.19 | for .. else .. statement. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/for_else.ipynb)] 
-- 2016.02.18 | namedtuple and defaultdict. [[nbviewer](http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/collections_module.ipynb)]
 
